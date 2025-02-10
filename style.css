@@ -76,4 +76,10 @@ select {
   width: auto;
   height: 40px;
   font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+  color: #6c9a8b;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
