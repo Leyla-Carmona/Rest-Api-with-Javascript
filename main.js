@@ -97,7 +97,6 @@ async function fvs(url, key, sel) { //Fvs for Favorites
             'x-api-key': key
         }
     })
- 
     const dta = await res.json(); 
     const neC = document.createElement('div');  //Nec for New Card
     neC.id = "neC"; 
@@ -113,10 +112,8 @@ async function fvs(url, key, sel) { //Fvs for Favorites
             const btd = document.createElement('button'); //Btd por Button Delete
             //Add the information that we have                         
             iml.src = aml.image.url;   
-            nam.innerText = aml.image_id;      
-                     
-           const inf = lnk(sel, aml.image_id)
-
+            nam.innerText = aml.image_id;                          
+            const inf = lnk(sel, aml.image_id)
             dtl(inf, nam, des, tem, lif); //Function to get the animal information
             btd.innerText ='Delete from favorite';
             //Add the information for our div
@@ -150,8 +147,7 @@ async function sfv(url, key, id) { //Sfv for Save favorites
                     }
                 ),                
         }
-    );
-    
+    );    
     alert('Saved');
 }
 
