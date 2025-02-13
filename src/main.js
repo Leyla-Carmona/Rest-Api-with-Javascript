@@ -1,19 +1,10 @@
 const ct1 = 'https://api.thecatapi.com/v1/images/search?mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=10';
 const fc2 = 'https://api.thecatapi.com/v1/favourites'
 const kca = 'live_P9OrfzVNgEG3CK1HQ2wsv6Ag3uiQd5amVHfV2a9jgi6NnhoXnGJm2IgdvQDQEBh0';
-
 const dg1 = 'https://api.thedogapi.com/v1/images/search?mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=10'; 
 const fd2 = 'https://api.thedogapi.com/v1/favourites'
 const kda = 'live_mnwFuzHapLEnQsJQIJudXWV6U92xok0BHPj3TyLn9DLrea4mNL2I0ILw1BP1oKMa';
 
-async function hom() {
-    const sel = document.getElementById("opt").value; //Sel for Selection
-    const typ = document.getElementById("fav").value; //Typ for Type (Only Favorites or All animals)   
-    if (sel == 'dog' & typ == 'all') stt(dg1, sel);
-    else if (sel == 'dog' & typ == 'fav') fvs(fd2, kda, sel);
-    else if (sel == 'cat' & typ == 'all') stt(ct1, sel)
-    else if (sel == 'cat' & typ == 'fav') fvs(fc2, kca, sel);
-}
 
 function aky (api){ //aky for API key
     if (api == 'dog') 
@@ -37,6 +28,16 @@ function lnk (api, id){ //lnk for link
     else 
         key = 'https://api.thecatapi.com/v1/images/' + id; 
     return key;
+}
+
+async function hom() {
+    const sel = document.getElementById("opt").value; //Sel for Selection
+    const typ = document.getElementById("fav").value; //Typ for Type (Only Favorites or All animals)   
+
+    if (sel == 'dog' & typ == 'all') stt(dg1, sel);
+    else if (sel == 'dog' & typ == 'fav') fvs(fd2, kda, sel);
+    else if (sel == 'cat' & typ == 'all') stt(ct1, sel)
+    else if (sel == 'cat' & typ == 'fav') fvs(fc2, kca, sel);
 }
 
 async function stt(url, sel) { //stt for Start

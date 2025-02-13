@@ -1,0 +1,20 @@
+{
+    "name": "rest_api_with_javascript",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Leyla-Carmona/Rest-Api-with-Javascript.git"
+    },
+    "author": "LeylaCarmona0812",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Leyla-Carmona/Rest-Api-with-Javascript/issues"
+    },
+    "homepage": "https://github.com/Leyla-Carmona/Rest-Api-with-Javascript#readme"
+  }
+  
