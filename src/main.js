@@ -49,7 +49,7 @@ async function stt(url, sel) { //stt for Start
     dta.forEach(aml => { 
         const inf = 'https://api.the'+sel+'api.com/v1/images/' + aml.id; //Inf for Information
         //Create the elements that we will use 
-        const crd = document.createElement('div') //Dse for section or Div        
+        const crd = document.createElement('div') //Crd card element 
         const iml = document.createElement('img'); //Iml por imagen element
         const nam = document.createElement('h2'); //Nam for name    
         const des = document.createElement('p'); //Des for description
