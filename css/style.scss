@@ -1,7 +1,6 @@
 body{
     background-color: rgba(79, 78, 68, 0.564);
 }
-
 #crd{   
     display: flex;
     flex-direction: column;
@@ -11,16 +10,8 @@ body{
     margin-bottom: 10px;
     background-color: rgba(88, 57, 20, 0.37); 
     width: 255px;
-   
-    p{
-        display: block;
-    }
-    button{
-        margin: 4px;
-        padding: 4px;
-        justify-content: flex-end;
-    }
 }
+
 
 #neC {
     display: flex;
