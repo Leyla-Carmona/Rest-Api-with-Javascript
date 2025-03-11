@@ -4,17 +4,28 @@
     "description": "",
     "main": "index.html",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/Leyla-Carmona/Rest-Api-with-Javascript.git"
+        "type": "git",
+        "url": "git+https://github.com/Leyla-Carmona/Rest-Api-with-Javascript.git"
     },
     "author": "LeylaCarmona0812",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/Leyla-Carmona/Rest-Api-with-Javascript/issues"
+        "url": "https://github.com/Leyla-Carmona/Rest-Api-with-Javascript/issues"
     },
-    "homepage": "https://github.com/Leyla-Carmona/Rest-Api-with-Javascript#readme"
-  }
-  
+    "homepage": "https://github.com/Leyla-Carmona/Rest-Api-with-Javascript#readme",
+    "devDependencies": {
+        "webpack": "^5.98.0",
+        "webpack-cli": "^6.0.1",
+        "webpack-dev-server": "^5.2.0"
+    }
+    {
+        "scripts": {
+          "build": "webpack --mode production",
+          "start": "webpack serve --mode development --open"
+        }
+      }
+      
+}
