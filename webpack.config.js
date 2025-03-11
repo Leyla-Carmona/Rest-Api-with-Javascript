@@ -1,12 +1,17 @@
 const path = require('path');
 const webpack = require('webpack');
-require('dotenv').config();  // Carga el archivo .env (si estás usándolo)
+require('dotenv').config();  
 
 module.exports = {
-  entry: './src/index.js',  // Cambia esto según la ubicación de tu archivo de entrada
+  entry: './src/index.js',  
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+  },
+  resolve: {
+    fallback: {
+      process: require.resolve('process/browser'),  
+    },
   },
   module: {
     rules: [
