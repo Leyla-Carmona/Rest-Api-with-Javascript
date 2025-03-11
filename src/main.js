@@ -1,3 +1,5 @@
+import process from 'process';
+
 const ct1 = process.env.CAT_API_URL;
 const fc2 = process.env.CAT_FAVOURITES_URL;
 const kca = process.env.CAT_API_KEY;

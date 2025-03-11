@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[context.production.environment]
+  CAT_API_URL = "https://api.thecatapi.com/v1/images/search"
+  DOG_API_URL = "https://api.thedogapi.com/v1/images/search"
+  CAT_API_KEY = "live_P9OrfzVNgEG3..."
+  DOG_API_KEY = "live_mnwFuzHapLE..."
+  CAT_FAVOURITES_URL = "https://api.thecatapi.com/v1/favourites"
+  DOG_FAVOURITES_URL = "https://api.thedogapi.com/v1/favourites"

@@ -1,30 +1,20 @@
-const path = require('path');
 const webpack = require('webpack');
-require('dotenv').config();  
+require('dotenv').config();
 
 module.exports = {
-  entry: './src/index.js',  
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-  },
-  resolve: {
-    fallback: {
-      process: require.resolve('process/browser'),  
-    },
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: 'babel-loader',
-      },
-    ],
-  },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': JSON.stringify(process.env),  // Inyecta las variables de entorno
+      'process.env.CAT_API_URL': JSON.stringify(process.env.CAT_API_URL),
+      'process.env.DOG_API_URL': JSON.stringify(process.env.DOG_API_URL),
+      'process.env.CAT_API_KEY': JSON.stringify(process.env.CAT_API_KEY),
+      'process.env.CAT_FAVOURITES_URL': JSON.stringify(process.env.CAT_FAVOURITES_URL),
+      'process.env.DOG_API_KEY': JSON.stringify(process.env.DOG_API_KEY),
+      'process.env.DOG_FAVOURITES_URL': JSON.stringify(process.env.DOG_FAVOURITES_URL),
     }),
   ],
+  resolve: {
+    fallback: {
+      process: require.resolve('process/browser'),
+    },
+  },
 };
