@@ -1,8 +1,14 @@
 const webpack = require('webpack');
-require('dotenv').config(); // Asegúrate de tener dotenv instalado
+const dotenv = require('dotenv');
+dotenv.config(); 
 
 module.exports = {
-  // Otras configuraciones de Webpack...
+  mode: "development", 
+  entry: "./src/main.js", 
+  output: {
+    filename: "bundle.js",
+    path: __dirname + "/dist",
+  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env.CAT_API_URL': JSON.stringify(process.env.CAT_API_URL),
@@ -13,4 +19,8 @@ module.exports = {
       'process.env.DOG_FAVOURITES_URL': JSON.stringify(process.env.DOG_FAVOURITES_URL),
     }),
   ],
+  devServer: {
+    static: "./dist",
+    hot: true,
+  },
 };
