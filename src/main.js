@@ -1,3 +1,10 @@
+console.log(CONFIG.CAT_API_URL);
+fetch(CONFIG.CAT_API_URL, {
+  headers: { "x-api-key": CONFIG.CAT_API_KEY }
+})
+.then(response => response.json())
+.then(data => console.log(data));
+
 const ct1 = process.env.CAT_API_URL;
 const fc2 = process.env.CAT_FAVOURITES_URL;
 const kca = process.env.CAT_API_KEY;
