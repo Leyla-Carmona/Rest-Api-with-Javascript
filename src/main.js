@@ -1,33 +1,30 @@
-const ct1 = 'https://api.thecatapi.com/v1/images/search?mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=10';
-const fc2 = 'https://api.thecatapi.com/v1/favourites'
-const kca = 'live_P9OrfzVNgEG3CK1HQ2wsv6Ag3uiQd5amVHfV2a9jgi6NnhoXnGJm2IgdvQDQEBh0';
-const dg1 = 'https://api.thedogapi.com/v1/images/search?mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=10'; 
-const fd2 = 'https://api.thedogapi.com/v1/favourites'
-const kda = 'live_mnwFuzHapLEnQsJQIJudXWV6U92xok0BHPj3TyLn9DLrea4mNL2I0ILw1BP1oKMa';
+const ct1 = process.env.CAT_API_URL;
+const fc2 = process.env.CAT_FAVOURITES_URL;
+const kca = process.env.CAT_API_KEY;
 
+const dg1 = process.env.DOG_API_URL;
+const fd2 = process.env.DOG_FAVOURITES_URL;
+const kda = process.env.DOG_API_KEY;
 
-function aky (api){ //aky for API key
-    if (api == 'dog') 
-        key = 'live_GDtZitQduUALnCGzvfs8GekninBkMr9JWxmDduiyEC9KzrHKkN2UhyBzAQnTR5Mz' 
+function aky(api) {  // aki for API key
+    if (api === 'dog') 
+        return process.env.DOG_API_KEY; // Usando process.env para obtener la clave
     else 
-        key = 'live_P9OrfzVNgEG3CK1HQ2wsv6Ag3uiQd5amVHfV2a9jgi6NnhoXnGJm2IgdvQDQEBh0';   
-    return key;
+        return process.env.CAT_API_KEY; // Usando process.env para obtener la clave
 }
 
-function fav (api){ //fav Api Key
-    if (api == 'dog') 
-        key = 'https://api.thedogapi.com/v1/favourites'
+function fav(api) {  //fav Api Key
+    if (api === 'dog') 
+        return process.env.DOG_FAVOURITES_URL; // Usando process.env para la URL de favoritos del perro
     else 
-        key = 'https://api.thecatapi.com/v1/favourites' 
-    return key;
+        return process.env.CAT_FAVOURITES_URL; // Usando process.env para la URL de favoritos del gato
 }
 
-function lnk (api, id){ //lnk for link
-    if (api == 'dog') 
-        key = 'https://api.thedogapi.com/v1/images/' + id;
+function lnk(api, id) {  // lnk for link
+    if (api === 'dog') 
+        return `${process.env.DOG_API_URL}/${id}`; // Usando process.env para obtener la URL de imágenes del perro
     else 
-        key = 'https://api.thecatapi.com/v1/images/' + id; 
-    return key;
+        return `${process.env.CAT_API_URL}/${id}`; // Usando process.env para obtener la URL de imágenes del gato
 }
 
 async function hom() {
