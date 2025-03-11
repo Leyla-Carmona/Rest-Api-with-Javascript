@@ -1,5 +1,3 @@
-import process from 'process';
-
 const ct1 = process.env.CAT_API_URL;
 const fc2 = process.env.CAT_FAVOURITES_URL;
 const kca = process.env.CAT_API_KEY;
@@ -7,6 +5,7 @@ const kca = process.env.CAT_API_KEY;
 const dg1 = process.env.DOG_API_URL;
 const fd2 = process.env.DOG_FAVOURITES_URL;
 const kda = process.env.DOG_API_KEY;
+console.log("API de gatos:", ct1);
 
 function aky(api) {  // aki for API key
     if (api === 'dog') 
