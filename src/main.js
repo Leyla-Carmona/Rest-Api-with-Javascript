@@ -1,11 +1,10 @@
-const ct1 = import.meta.env.VITE_CAT_API_URL;
-const fc2 = import.meta.env.VITE_CAT_FAVOURITES_URL;
-const kca = import.meta.env.VITE_CAT_API_KEY;
+const ct1 = process.env.CAT_API_URL;
+const fc2 = process.env.CAT_FAVOURITES_URL;
+const kca = process.env.CAT_API_KEY;
 
-const dg1 = import.meta.env.VITE_DOG_API_URL;
-const fd2 = import.meta.env.VITE_DOG_FAVOURITES_URL;
-const kda = import.meta.env.VITE_DOG_API_KEY;
-
+const dg1 = process.env.DOG_API_URL;
+const fd2 = process.env.DOG_FAVOURITES_URL;
+const kda = process.env.DOG_API_KEY;
 
 function aky(api) {  // aki for API key
     if (api === 'dog') 
