@@ -1,3 +1,11 @@
+fetch('/.netlify/functions/getCats')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data); 
+    })
+    .catch(error => console.error(error));
+
+
 console.log(CONFIG.CAT_API_URL);
 fetch(CONFIG.CAT_API_URL, {
   headers: { "x-api-key": CONFIG.CAT_API_KEY }
